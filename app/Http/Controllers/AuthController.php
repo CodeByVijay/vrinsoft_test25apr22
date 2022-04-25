@@ -44,7 +44,7 @@ class AuthController extends Controller
             $user->profile_img = $fileName;
         }
         $user->save();
-        return redirect('/login')->withSuccess(strtoupper($request->name).' Registration Successfully.');
+        return redirect('/login')->withSuccess(strtoupper($request->name).' Registration Successfully Complete.');
     }
 
     public function login(Request $request){
@@ -77,4 +77,6 @@ class AuthController extends Controller
   
         return Redirect('login');
     }
+
+    
 }
