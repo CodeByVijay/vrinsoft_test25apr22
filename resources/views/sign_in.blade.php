@@ -13,14 +13,16 @@
 
             <div class="signin-form">
                 @if(Session::has('success'))
-                <div class="alert alert-success alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
                     {{Session::get('success')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
                 </div>
                 @elseif(Session::has('failed'))
-                <div class="alert alert-success alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
                     {{Session::get('failed')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
                 </div>
                 @endif
 
